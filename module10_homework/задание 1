@@ -1,0 +1,20 @@
+myNumber = prompt('Guess the number')
+switch (true) {
+  case isNaN(myNumber):
+    alert('Это NaN');
+    break;
+	case isNaN(+myNumber):
+    alert('Упс, кажется, вы ошиблись');
+    break;
+  default:
+    if (+myNumber !== Math.round(+myNumber)) {
+      alert('Число ' + myNumber + ' дробное');
+      break;
+    }
+    if (0 !== +myNumber%2) {
+      alert('Число ' + myNumber + ' нечетное');
+    } else {
+      alert('Число ' + myNumber + ' четное');
+    }
+    break;
+}
